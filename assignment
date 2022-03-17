@@ -1,0 +1,73 @@
+SQL> connect
+Enter user-name: system
+Enter password:
+Connected.
+SQL> create table restuarant(billid int,name varchar2(10),ph_no number(10),amount number(10));
+
+Table created.
+
+SQL> create sequence billid
+  2  start with 1000001
+  3  increment by 1
+  4  minvalue 1000001
+  5  maxvalue 1000999
+  6  cycle;
+
+Sequence created.
+
+SQL> insert into restuarant values(billid.nextval,'chaithu',1234,900);
+
+1 row created.
+
+SQL> insert into restuarant values(billid.nextval,'chanti',1564,970);
+
+1 row created.
+
+SQL> insert into restuarant values(billid.nextval,'chinni',9564,970);
+
+1 row created.
+
+SQL> insert into restuarant values(billid.nextval,'chamu',9523,770);
+
+1 row created.
+
+SQL> insert into restuarant values(billid.nextval,'chinnu',4523,790);
+
+1 row created.
+
+SQL> insert into restuarant values(billid.nextval,'shalini',4903,790);
+
+1 row created.
+
+SQL> insert into restuarant values(billid.nextval,'jaya',9903,990);
+
+1 row created.
+
+SQL> insert into restuarant values(billid.nextval,'rajya',9803,900);
+
+1 row created.
+
+SQL> insert into restuarant values(billid.nextval,'babblu',9893,500);
+
+1 row created.
+
+SQL> insert into restuarant values(billid.nextval,'bujji',9853,300);
+
+1 row created.
+
+SQL> select * from restuarant;
+
+    BILLID NAME            PH_NO     AMOUNT
+---------- ---------- ---------- ----------
+   1000001 chaithu          1234        900
+   1000002 chanti           1564        970
+   1000003 chinni           9564        970
+   1000004 chamu            9523        770
+   1000005 chinnu           4523        790
+   1000006 shalini          4903        790
+   1000007 jaya             9903        990
+   1000008 rajya            9803        900
+   1000009 babblu           9893        500
+   1000010 bujji            9853        300
+
+10 rows selected.
